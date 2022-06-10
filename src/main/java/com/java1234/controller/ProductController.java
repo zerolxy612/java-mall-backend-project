@@ -1,6 +1,7 @@
 package com.java1234.controller;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.java1234.entity.Product;
 import com.java1234.entity.R;
 import com.java1234.service.IProductService;
@@ -34,6 +35,21 @@ public class ProductController {
         List<Product> swiperProductList = productService.list(new QueryWrapper<Product>().eq("isSwiper", true).orderByAsc("swiperSort"));
         Map<String,Object> map=new HashMap<>();
         map.put("message",swiperProductList);
+        return R.ok(map);
+    }
+
+    /**
+     * 查询前8个热卖商品
+     * @return
+     */
+    @GetMapping("/findHot")
+    public R findHot(){
+
+        Page<Product> page = new Page<>(0,8);
+        Page<Product> pageProduct = productService.page(page,new QueryWrapper<Product>().eq("isHot",true).orderByAsc("hotDateTime"));
+        List<Product> hotProductList = pageProduct.getRecords();
+        Map<String,Object> map=new HashMap<>();
+        map.put("message",hotProductList);
         return R.ok(map);
     }
 }

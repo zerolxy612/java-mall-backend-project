@@ -14,6 +14,8 @@ public class WebAppConfigurer implements WebMvcConfigurer {
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
         registry.addResourceHandler("/image/swiper/**").addResourceLocations("file:D:\\java1234-mall-swiperling\\swiperImgs\\");
+        registry.addResourceHandler("/image/bigType/**").addResourceLocations("file:D:\\java1234-mall-swiperling\\bigTypeImgs\\");
+        registry.addResourceHandler("/image/product/**").addResourceLocations("file:D:\\java1234-mall-swiperling\\productImgs\\");
     }
 }
 

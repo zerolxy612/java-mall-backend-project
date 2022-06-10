@@ -31,4 +31,6 @@ public class BigTypeController {
         map.put("message",bigTypeList);
         return R.ok(map);
     }
+
+
 }
