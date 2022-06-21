@@ -16,6 +16,10 @@ public class WebAppConfigurer implements WebMvcConfigurer {
         registry.addResourceHandler("/image/swiper/**").addResourceLocations("file:D:\\java1234-mall-swiperling\\swiperImgs\\");
         registry.addResourceHandler("/image/bigType/**").addResourceLocations("file:D:\\java1234-mall-swiperling\\bigTypeImgs\\");
         registry.addResourceHandler("/image/product/**").addResourceLocations("file:D:\\java1234-mall-swiperling\\productImgs\\");
+        registry.addResourceHandler("/image/productSwiperImgs/**").addResourceLocations("file:D:\\java1234-mall-swiperling\\productSwiperImgs\\");
+        registry.addResourceHandler("/image/productIntroImgs/**").addResourceLocations("file:D:\\java1234-mall-swiperling\\productIntroImgs\\");
+        registry.addResourceHandler("/image/productParaImgs/**").addResourceLocations("file:D:\\java1234-mall-swiperling\\productParaImgs\\");
+
     }
 }
 
