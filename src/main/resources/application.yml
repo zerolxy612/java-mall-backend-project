@@ -14,9 +14,14 @@ spring:
 mybatis-plus:
   global-config:
     db-config:
-      id-type: auto #id生成规则：数据库id自增
+      id-type: auto
   configuration:
-    map-underscore-to-camel-case: false  # 开启驼峰功能
-    auto-mapping-behavior: full # 自动映射任何复杂的结果
+    map-underscore-to-camel-case: false
+    auto-mapping-behavior: full
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
   mapper-locations: classpath:mybatis/mapper/*.xml
+
+wexin:
+  jscode2sessionUrl: https://api.weixin.qq.com/sns/jscode2session
+  appid: wx87ba5ee1edc5756c
+  secret: e53e917ddcdf639ba458a628ad49ff2e

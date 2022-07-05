@@ -20,6 +20,6 @@ public class TestController {
      */
     @GetMapping("/test")
     public R test(){
-        return R.ok("流弊java1234");
+        return R.ok("haoren");
     }
 }
